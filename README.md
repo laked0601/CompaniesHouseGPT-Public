@@ -27,6 +27,17 @@ A research project for analysing the data held in the public domain at the UK Co
 <p><b>To run the code:</b></p>
 <ul>
   <li>Install Python and add it to your system path<br><a href='https://www.python.org/downloads/'>https://www.python.org/downloads/</a></li>
+  <li>Run 'setup.bat' or 'setup.sh'</li>
   <li>Sign in / Register at the UK Companies House API dashboard, create a new application and add your API key to 'main.py':<br><a href='https://developer.company-information.service.gov.uk/overview'>https://developer.company-information.service.gov.uk/overview</a></li>
-  <li></li>
+  <li>Sign in / Register at OpenAI's API and save your API secret key to 'main.py'<br><a href='https://platform.openai.com/signup'>https://platform.openai.com/signup</a></li>
 </ul>
+<p>Now 'main.py' should look like this</p>
+
+```python
+if __name__ == "__main__":
+    openai.api_key = "YOUR-OPENAI-API-KEY"
+    CH.AUTH = ("YOUR-COMPANIES-HOUSE-API-KEY", '')
+    main()
+```
+
+<p>This is now ready to run and can produce the save data as included in 'Auditor Count.csv' and 'Companies that Use Auditors.csv' 👍</p>
